@@ -1,25 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, ThemeProvider, createTheme } from "@mui/material";
+import Home from "./pages/Home/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const theme = createTheme({
+  
+  typography: {
+    h1: {
+      color: "#389cd6",
+      fontSize: "1.938rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: 700
+    },
+    h2: {
+      color: "white",
+      fontSize: "1.563rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: 700
+    },
+    h3: {
+      color: "#7B7070",
+      fontSize: "1rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: "normal"
+    },
+    h4: {
+      color: "white",
+      fontSize: "1rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: 700
+    },
+    h5: {
+      color: "#7B7070",
+      fontSize: "1.25rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: "normal"
+    },
+    h6: {
+      color: "white",
+      fontSize: "0.88rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: "normal"
+    },
+    button: {
+      color: "white",
+      fontSize: "1.25rem",
+      fontFamily: ['Trebuchet MS', 'sans serif'].join(),
+      fontWeight: 700
+    }
+  },
+});
+
+const App: React.FC = () => {
+  return(
+    <Box>
+      <ThemeProvider theme={theme}>
+        <Home/>
+      </ThemeProvider>
+    </Box>
   );
 }
 
