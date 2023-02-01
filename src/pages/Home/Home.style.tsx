@@ -1,5 +1,5 @@
 import { SxProps } from "@mui/system"
-import iconsInfos from "src/assets/images/small/icon_infos.png";
+import iconsInfos from "src/assets/images/small/icon_infos_mobile.png";
 import iconsInfosWeb  from "src/assets/images/web/icon_infos.png";
 
 type StyleProps<T, K extends PropertyKey> = { [P in K]: T }
