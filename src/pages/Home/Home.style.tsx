@@ -30,7 +30,13 @@ export const sxStyles = makeSxStyles({
         display: { xs: "none", sm: "none", md: "none", lg: "block", xl: "block" } 
     },
     titles: {
-        padding: { xs: "2.5rem 2rem", sm: "2.5rem 2rem", md: "2.5rem 2rem", lg: "5rem 2.5rem", xl: "5rem 2.5rem" }
+        padding: { xs: "2.5rem 2rem",  lg: "5rem 20rem 0 20rem" }
+    },
+    cocreated: {
+        padding: {xs: "none", lg: "2.5rem 20rem 0 20rem"}
+    },
+    help: {
+        padding: {xs: "none", lg: "2.5rem 26rem 0 26rem"}
     },
     iconsPromote: {
         width: { xs: "100vw", sm: "24.5rem", lg: "70rem" },

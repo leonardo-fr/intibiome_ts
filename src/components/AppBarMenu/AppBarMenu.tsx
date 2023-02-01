@@ -96,7 +96,7 @@ const AppBarMenu: React.FC = () => {
             {navItemsMobile.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton onClick={handleMenu} sx={sxStyles.listItem}>
-                  <Typography variant="h4">{item}</Typography>
+                  <Typography variant="h4">&emsp;&emsp;{item}</Typography>
                 </ListItemButton>
               </ListItem>
             ))}
@@ -106,7 +106,13 @@ const AppBarMenu: React.FC = () => {
       <Fade in={iconSearchOpen}>
         <Box position="absolute" sx={sxStyles.fadeSearch}>
           <Divider />
-          <TextField
+          <TextField sx={{
+            background: "white",
+            borderRadius: "0.5rem",
+            border: "1px solid grey",
+            marginTop: "1rem",
+            width: "40vw",
+          }}
             value={inputSearch}
             onChange={onInputSearchChange}
           ></TextField>
@@ -114,7 +120,7 @@ const AppBarMenu: React.FC = () => {
             {filteredItems.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton onClick={handleSearch}>
-                  <Typography variant="h4">{item}</Typography>
+                  <Typography variant="h4">&emsp;&emsp;{item}</Typography>
                 </ListItemButton>
               </ListItem>
             ))}

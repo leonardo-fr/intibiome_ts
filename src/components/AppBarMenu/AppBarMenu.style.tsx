@@ -37,13 +37,14 @@ export const sxStyles = makeSxStyles({
     gap: "4rem"
   },
   fadeSearch: {
-    width: "100%",
+    width: "100vw",
     background: {
       xs: "rgba(56, 156, 214)",
       md: "rgba(56, 156, 214, 0.8)"
     },
     height: "38rem",
     gap: "1rem",
+    overflow: "hidden",
   },
   navBarItem: {
     margin: "auto 0",

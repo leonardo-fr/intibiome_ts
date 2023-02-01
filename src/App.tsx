@@ -6,7 +6,7 @@ const theme = createTheme({
   typography: {
     h1: {
       color: "#389cd6",
-      fontSize: "1.938rem",
+      fontSize: "2.19rem",
       fontFamily: ['Trebuchet MS', 'sans serif'].join(),
       fontWeight: 700
     },
@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     h3: {
       color: "#7B7070",
-      fontSize: "1rem",
+      fontSize: "1.16rem",
       fontFamily: ['Trebuchet MS', 'sans serif'].join(),
       fontWeight: "normal"
     },

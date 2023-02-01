@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         <Typography sx={sxStyles.titles} variant="h1">
           we're here to help
         </Typography>
-        <Typography sx={{ paddingBottom: "2.5rem" }} variant="h3">
+        <Typography sx={sxStyles.help} variant="h3">
           <p>
             When it comes to caring for our most intimate areas, we’ve lost our
             connection.
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         <Typography sx={sxStyles.titles} variant="h1">
           whatever your age. whatever your lifestyle. whatever your interests.
         </Typography>
-        <Typography variant="h3">
+        <Typography sx={sxStyles.cocreated} variant="h3">
           <p>
             Co-created with gynaecologists, our revolutionary products have been
             expertly developed to support your intimate microbiome and pH
