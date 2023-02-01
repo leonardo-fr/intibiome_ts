@@ -36,10 +36,22 @@ export const sxStyles = makeSxStyles({
     justifyContent: "center",
     gap: "4rem"
   },
+  fadeSearch: {
+    width: "100%",
+    background: {
+      xs: "rgba(56, 156, 214)",
+      md: "rgba(56, 156, 214, 0.8)"
+    },
+    height: "38rem",
+    gap: "1rem",
+  },
   navBarItem: {
     margin: "auto 0",
     display: "flex",
     color: "white",
     gap: "0.1rem"
+  },
+  listItem: {
+    padding: "2.875rem 0 0 2rem"
   }
 })

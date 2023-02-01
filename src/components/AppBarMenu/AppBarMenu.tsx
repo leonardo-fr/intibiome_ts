@@ -7,13 +7,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
-import iconMenu from "../../assets/icons/icon_menu.svg";
-import logoIntibiome from "../../assets/images/small/logoIntibiome.png";
-import iconClose from "../../assets/images/small/icon_close.png";
-import iconSearch from "../../assets/icons/icon_search.svg";
-import { Icon, Slide, Typography } from "@mui/material";
+import iconMenu from "src/assets/icons/icon_menu.svg";
+import logoIntibiome from "src/assets/images/small/logoIntibiome.png";
+import iconClose from "src/assets/images/small/icon_close.png";
+import iconSearch from "src/assets/icons/icon_search.svg";
+import { Fade, Slide, TextField, Typography } from "@mui/material";
 import { sxStyles } from "./AppBarMenu.style";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const navItemsMobile = [
   "brand philosophy",
@@ -36,11 +36,35 @@ const navItemsWeb = [
   "contact us",
 ];
 
+const navWebMobileItems = [...navItemsMobile, ...navItemsWeb].filter(function (
+  element,
+  index
+) {
+  return [...navItemsMobile, ...navItemsWeb].indexOf(element) === index;
+});
+
 const AppBarMenu: React.FC = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [iconSearchOpen, setIconSearchOpen] = React.useState(false);
+  const [inputSearch, setInputSearch] = React.useState("");
+  const [allNavItems, setAllNavItems] = React.useState<string[]>();
+
+  const filteredItems =
+    inputSearch.length > 0
+      ? navWebMobileItems.filter((element) => element.includes(inputSearch))
+      : navWebMobileItems.filter((element) => element.includes(""));
 
   const handleMenu = () => {
+    if (iconSearchOpen === true) handleSearch();
     setMobileOpen((prevState) => !prevState);
+  };
+  const handleSearch = () => {
+    if (mobileOpen === true) handleMenu();
+    setIconSearchOpen((prevState) => !prevState);
+  };
+
+  const onInputSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputSearch(event.target.value);
   };
 
   return (
@@ -60,6 +84,7 @@ const AppBarMenu: React.FC = () => {
             component="img"
             alt="Logo"
             src={iconSearch}
+            onClick={handleSearch}
             sx={sxStyles.searchIcon}
           />
         </Toolbar>
@@ -70,10 +95,7 @@ const AppBarMenu: React.FC = () => {
           <List>
             {navItemsMobile.map((item) => (
               <ListItem key={item} disablePadding>
-                <ListItemButton
-                  onClick={handleMenu}
-                  sx={{ padding: "2.875rem 0 0 2rem" }}
-                >
+                <ListItemButton onClick={handleMenu} sx={sxStyles.listItem}>
                   <Typography variant="h4">{item}</Typography>
                 </ListItemButton>
               </ListItem>
@@ -81,26 +103,32 @@ const AppBarMenu: React.FC = () => {
           </List>
         </Box>
       </Slide>
-      <Box position="static" sx={sxStyles.appBarMenu}>
-          {navItemsWeb.map((item) => (
-            <Box sx={sxStyles.navBarItem}>
-              <Typography variant="h6">{item}</Typography>
-              <ExpandMoreIcon/>
-            </Box>
-          ))}
-          {/* <List>
-            {navItemsWeb.map((item) => (
+      <Fade in={iconSearchOpen}>
+        <Box position="absolute" sx={sxStyles.fadeSearch}>
+          <Divider />
+          <TextField
+            value={inputSearch}
+            onChange={onInputSearchChange}
+          ></TextField>
+          <List>
+            {filteredItems.map((item) => (
               <ListItem key={item} disablePadding>
-                <ListItemButton
-                  onClick={handleMenu}
-                  sx={{ padding: "2.875rem 0 0 2rem" }}
-                >
+                <ListItemButton onClick={handleSearch}>
                   <Typography variant="h4">{item}</Typography>
                 </ListItemButton>
               </ListItem>
             ))}
-          </List> */}
+          </List>
         </Box>
+      </Fade>
+      <Box position="static" sx={sxStyles.appBarMenu}>
+        {navItemsWeb.map((item) => (
+          <Box sx={sxStyles.navBarItem}>
+            <Typography variant="h6">{item}</Typography>
+            <ExpandMoreIcon />
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

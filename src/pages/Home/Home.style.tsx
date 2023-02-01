@@ -1,6 +1,6 @@
 import { SxProps } from "@mui/system"
-import iconsInfos from "./src/assets/images/small/icon_infos.png";
-import iconsInfosWeb from "./src/assets/images/web/icon_infos.png";
+import iconsInfos from "src/assets/images/small/icon_infos.png";
+import iconsInfosWeb  from "src/assets/images/web/icon_infos.png";
 
 type StyleProps<T, K extends PropertyKey> = { [P in K]: T }
 const makeSxStyles = <K extends PropertyKey>(props: StyleProps<SxProps, K>) => props
@@ -33,6 +33,16 @@ export const sxStyles = makeSxStyles({
         padding: { xs: "2.5rem 2rem", sm: "2.5rem 2rem", md: "2.5rem 2rem", lg: "5rem 2.5rem", xl: "5rem 2.5rem" }
     },
     iconsPromote: {
-        backgroundImage: `url(${iconsInfosWeb})`
-    }
+        width: { xs: "100vw", sm: "24.5rem", lg: "70rem" },
+        height: { xs: "7.56rem", lg: "16.18rem" },
+        margin: "0 auto",
+        justifyContent: "center",
+        display: "block",
+        background: {
+            xs: `url(${iconsInfos}) no-repeat`,
+            md: `url(${iconsInfos}) no-repeat`,
+            lg: `url(${iconsInfosWeb})`,
+            xl: `url(${iconsInfosWeb})`
+        }
+    },
 })

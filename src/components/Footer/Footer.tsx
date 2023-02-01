@@ -1,27 +1,20 @@
 import { Box, Divider, Typography } from "@mui/material";
-import iconInstagram from "../../assets/images/small/icon_instagram.png";
-import ulabs from "../../assets/images/small/ulabs.png";
+import iconInstagram from "src/assets/images/small/icon_instagram.png";
+import ulabs from "src/assets/images/small/ulabs.png";
 import { sxStyles } from "./Footer.style";
 
 const Footer: React.FC = () => {
   const iconsFooter = [
-    <Box
-      // sx={{ paddingTop: "2.68rem" }}
-      component="img"
-      alt="instagram icon"
-      src={iconInstagram}
-    />,
-    <Box
-      // sx={{ paddingTop: "6.25rem", marginBottom: "4.31rem" }}
-      component="img"
-      alt="logo ulabs"
-      src={ulabs}
-    />,
+    <Box component="img" alt="instagram icon" src={iconInstagram} />,
+    <Box component="img" alt="logo ulabs" src={ulabs} />,
   ];
 
   return (
-    <Box sx={{
-    backgroundColor: "#389CD6",}}>
+    <Box
+      sx={{
+        backgroundColor: "#389CD6",
+      }}
+    >
       <Box sx={sxStyles.footer}>
         <Typography sx={{}} variant="h4">
           contact us
@@ -37,14 +30,14 @@ const Footer: React.FC = () => {
         <Divider sx={sxStyles.divider} />
         <Typography variant="h4">legal notice</Typography>
       </Box>
-        <Box sx={sxStyles.iconsFooter}>
-          {iconsFooter.map((item) => (
-            <Box sx={sxStyles.iconsFooterMobile}>{item}</Box>
-          ))}
-          {iconsFooter.reverse().map((item) => (
-            <Box sx={sxStyles.iconsFooterWeb}>{item}</Box>
-          ))}
-        </Box>
+      <Box sx={sxStyles.iconsFooter}>
+        {iconsFooter.map((item) => (
+          <Box sx={sxStyles.iconsFooterMobile}>{item}</Box>
+        ))}
+        {iconsFooter.reverse().map((item) => (
+          <Box sx={sxStyles.iconsFooterWeb}>{item}</Box>
+        ))}
+      </Box>
     </Box>
   );
 };

@@ -1,12 +1,21 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hello, my name is Leonardo, I developed this application with React to test the vacancy in front-end web development. This application it's called Intibiome!
+Here is the link to the video with the explanation:
+`youtube.com`
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory you can run installation packages with:
+
+### `npm install`
+or
+### `yarn add`
+
+you can run the project with:
 
 ### `npm start`
+or
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,10 +23,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### Versions of managers, packages and programming languages:
+### TypeScript: Version 4.7.4
+### node: v14.17.6
+### yarn: 1.22.19
+### npm: 6.14.15
+### react: 18.0.27
+### emotion: 11.10.5
+
 ### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -25,13 +42,11 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+this app is ready to be deployed.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Note: this is a one-way operation. Once you 'eject', you can not go back!*
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 

@@ -1,14 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import iconsInfos from "../../assets/images/small/icon_infos.png";
-import iconsInfosWeb from "../../assets/images/web/icon_infos.png";
-import bannerMobile from "../../assets/images/small/banner_mobile.png";
-import bannerMobileTwo from "../../assets/images/small/banner_mobile_two.png";
-import bannerWeb from "../../assets/images/small/banner_web.png";
-import bannerWebTwo from "../../assets/images/small/banner_web_two.png";
-import AppBarMenu from "../../components/AppBarMenu/AppBarMenu";
-import Footer from "../../components/Footer/Footer";
-import Products from "../../components/Products/Products";
-import Discoveries from "../../components/Discoveries/Discoveries";
+import bannerMobile from "src/assets/images/small/banner_mobile.png";
+import bannerMobileTwo from "src/assets/images/small/banner_mobile_two.png";
+import bannerWeb from "src/assets/images/small/banner_web.png";
+import bannerWebTwo from "src/assets/images/small/banner_web_two.png";
+import AppBarMenu from "src/components/AppBarMenu/AppBarMenu";
+import Footer from "src/components/Footer/Footer";
+import Products from "src/components/Products/Products";
+import Discoveries from "src/components/Discoveries/Discoveries";
 import { sxStyles } from "./Home.style";
 
 const Home: React.FC = () => {
@@ -49,7 +47,7 @@ const Home: React.FC = () => {
             products you need to feel confident in your personal care.
           </p>
         </Typography>
-        <Box sx={sxStyles.iconsPromote} component="img" alt="Logo" src={iconsInfos} />
+        <Box sx={sxStyles.iconsPromote} />
         <Typography sx={sxStyles.titles} variant="h1">
           whatever your age. whatever your lifestyle. whatever your interests.
         </Typography>

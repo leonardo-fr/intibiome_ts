@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
-import productOne from "../../assets/images/small/product_one.png";
-import productTwo from "../../assets/images/small/product_two.png";
-import productThree from "../../assets/images/small/product_three.png";
+import productOne from "src/assets/images/small/product_one.png";
+import productTwo from "src/assets/images/small/product_two.png";
+import productThree from "src/assets/images/small/product_three.png";
 import { sxStyles } from "./Products.styles";
 
 const Products: React.FC = () => {

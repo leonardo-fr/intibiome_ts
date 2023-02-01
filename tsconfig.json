@@ -21,12 +21,10 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "assets": [ "src/assets"],
-      "components": [ "src/components"],
-      "pages": [ "src/pages"],
+      "Assets": [ "src/assets"],
     }
   },
   "include": [
-    "src"
+    "src",
   ]
 }

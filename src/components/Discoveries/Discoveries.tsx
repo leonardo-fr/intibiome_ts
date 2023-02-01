@@ -1,8 +1,8 @@
 import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import womanOne from "../../assets/images/small/woman_one.png";
-import womanTwo from "../../assets/images/small/woman_two.png";
-import water from "../../assets/images/small/water.png";
+import womanOne from "src/assets/images/small/woman_one.png";
+import womanTwo from "src/assets/images/small/woman_two.png";
+import water from "src/assets/images/small/water.png";
 import { sxStyles } from "./Discoveries.style";
 
 const Discoveries: React.FC = () => {
