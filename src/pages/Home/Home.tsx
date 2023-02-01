@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import icons_Infos from "../../assets/images/small/icon_Infos.png";
+import iconsInfos from "../../assets/images/small/icon_infos.png";
+import iconsInfosWeb from "../../assets/images/web/icon_infos.png";
 import bannerMobile from "../../assets/images/small/banner_mobile.png";
 import bannerMobileTwo from "../../assets/images/small/banner_mobile_two.png";
 import bannerWeb from "../../assets/images/small/banner_web.png";
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
         />
       </Box>
       <Box sx={{ padding: "1.125rem" }}>
-        <Typography sx={{ padding: "2.5rem 2rem" }} variant="h1">
+        <Typography sx={sxStyles.titles} variant="h1">
           we're here to help
         </Typography>
         <Typography sx={{ paddingBottom: "2.5rem" }} variant="h3">
@@ -48,8 +49,8 @@ const Home: React.FC = () => {
             products you need to feel confident in your personal care.
           </p>
         </Typography>
-        <Box component="img" alt="Logo" src={icons_Infos} />
-        <Typography sx={{ padding: "2.5rem 2rem" }} variant="h1">
+        <Box sx={sxStyles.iconsPromote} component="img" alt="Logo" src={iconsInfos} />
+        <Typography sx={sxStyles.titles} variant="h1">
           whatever your age. whatever your lifestyle. whatever your interests.
         </Typography>
         <Typography variant="h3">

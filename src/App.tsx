@@ -11,6 +11,7 @@ const theme = createTheme({
       fontWeight: 700
     },
     h2: {
+      paddingTop: "1rem",
       color: "white",
       fontSize: "1.563rem",
       fontFamily: ['Trebuchet MS', 'sans serif'].join(),
