@@ -106,13 +106,8 @@ const AppBarMenu: React.FC = () => {
       <Fade in={iconSearchOpen}>
         <Box position="absolute" sx={sxStyles.fadeSearch}>
           <Divider />
-          <TextField sx={{
-            background: "white",
-            borderRadius: "0.5rem",
-            border: "1px solid grey",
-            marginTop: "1rem",
-            width: "40vw",
-          }}
+          <TextField
+            sx={sxStyles.inputSearch}
             value={inputSearch}
             onChange={onInputSearchChange}
           ></TextField>

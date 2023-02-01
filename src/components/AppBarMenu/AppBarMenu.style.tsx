@@ -22,6 +22,13 @@ export const sxStyles = makeSxStyles({
   searchIcon: {
     justifyContent: { xs: "end", sm: "end", md: "end", lg: "start", xl: "start"}
   },
+  inputSearch: {
+    background: "white",
+    borderRadius: "0.5rem",
+    border: "1px solid grey",
+    marginTop: "1rem",
+    width: "40vw",
+  },
   slideMenu: {
     width: "100%",
     display: mobileRender,
