@@ -1,7 +1,24 @@
 
 ## Hello, my name is Leonardo, I developed this application with React to test the vacancy in front-end web development. This application it's called Intibiome!
-Here is the link to the video with the explanation:
-`youtube.com`
+
+#Sreenshots: 
+Mobile home:
+![home_mobile](https://user-images.githubusercontent.com/62729623/215994455-c6092db4-6b19-4615-9015-777429aaff31.png)
+
+Mobile sidebar:
+![home_mobile_appBar_sidebar](https://user-images.githubusercontent.com/62729623/215994518-eb5152ff-ea47-4ce6-9807-1107907faf28.png)
+
+Mobile search:
+![search_appBar_mobile](https://user-images.githubusercontent.com/62729623/215994685-638fbe96-0805-491b-9601-ae08d0cf7d3b.png)
+
+Web home:
+![home_web](https://user-images.githubusercontent.com/62729623/215994745-e5e82ecd-10d8-4e4c-ad4f-60814a466146.png)
+
+Web search:
+![search_appBar_web](https://user-images.githubusercontent.com/62729623/215994902-a1517ea2-2b70-44eb-8ed5-8b1fef253df9.png)
+
+Web footer:
+![footer_web](https://user-images.githubusercontent.com/62729623/215994961-5fb1b48a-51a4-403c-9920-0837f01a1691.png)
 
 ## Available Scripts
 
