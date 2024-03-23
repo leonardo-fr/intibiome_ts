@@ -12,7 +12,7 @@ import { sxStyles } from "./Home.style";
 const Home: React.FC = () => {
   return (
     <Box className="App" sx={sxStyles.home}>
-      <AppBarMenu />
+      <AppBarMenu isHome={true} />
       <Box>
         <Box
           sx={sxStyles.bannerMobile}
@@ -29,39 +29,43 @@ const Home: React.FC = () => {
       </Box>
       <Box sx={{ padding: "1.125rem" }}>
         <Typography sx={sxStyles.titles} variant="h1">
-          we're here to help
+          Nós estamos aqui para ajudar!
         </Typography>
         <Typography sx={sxStyles.help} variant="h3">
           <p>
-            When it comes to caring for our most intimate areas, we’ve lost our
-            connection.
+            Quando se trata de cuidar das nossas áreas mais íntimas, perdemos a
+            conexão
           </p>
           <br />
           <p>
-            Embarrassed, unwilling, or unable to communicate with others, we’re
-            needlessly neglecting the parts of our bodies that need it most.
+            Envergonhados, sem vontade ou incapazes de nos comunicarmos com os
+            outros, negligenciamos desnecessariamente as partes do nosso corpo
+            que mais precisam.
           </p>
           <br />
           <p>
-            We’re here to help. Providing you with the expertise, knowledge and
-            products you need to feel confident in your personal care.
+            Nós estamos aqui para ajudar. Fornecendo a você a experiência, o
+            conhecimento e os produtos que você precisa para se sentir confiante
+            em seus cuidados pessoais.
           </p>
         </Typography>
         <Box sx={sxStyles.iconsPromote} />
         <Typography sx={sxStyles.titles} variant="h1">
-          whatever your age. whatever your lifestyle. whatever your interests.
+          seja qual for a sua idade. seja qual for o seu estilo de vida.
+          quaisquer que sejam seus interesses.
         </Typography>
         <Typography sx={sxStyles.cocreated} variant="h3">
           <p>
-            Co-created with gynaecologists, our revolutionary products have been
-            expertly developed to support your intimate microbiome and pH
-            balance, and strengthen overall natural health.
+            Criados em colaboração com ginecologistas, os nossos produtos
+            revolucionários foram habilmente desenvolvidos para apoiar o seu
+            microbioma íntimo e o equilíbrio do pH e fortalecer a saúde natural
+            geral.
           </p>
           <br />
           <p>
-            As the experts in intimate hygiene, we want to bring discussion
-            about intimate wellness care out of the dark and demystify the
-            taboos that surround it.
+            Como especialistas em higiene íntima, queremos trazer do escuro a
+            discussão sobre os cuidados com o bem-estar íntimo e desmistificar
+            os tabus que os cercam.
           </p>
         </Typography>
       </Box>
@@ -85,7 +89,7 @@ const Home: React.FC = () => {
       <Box>
         <Discoveries />
         <Box sx={sxStyles.buttonSeeMore}>
-          <Typography variant="button">see more</Typography>
+          <Typography variant="button">veja mais</Typography>
         </Box>
       </Box>
       <Box>

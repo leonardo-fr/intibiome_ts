@@ -8,7 +8,7 @@ const Products: React.FC = () => {
   return (
     <Box>
       <Typography sx={sxStyles.ourProducts} variant="h1">
-        our products
+        Nossos produtos
       </Typography>
       <Box sx={sxStyles.products}>
         <Paper sx={sxStyles.paper}>
@@ -19,12 +19,10 @@ const Products: React.FC = () => {
             src={productOne}
           />
           <Typography sx={sxStyles.legends} variant="h5">
-            intibiome wellness daily intimate wash
+            Intibiome wellness lavagem íntima diária
           </Typography>
           <Box sx={sxStyles.productWellnes}>
-            <Typography variant="h2">
-              wellness
-            </Typography>
+            <Typography variant="h2">Wellness</Typography>
           </Box>
         </Paper>
         <Paper sx={sxStyles.paper}>
@@ -35,12 +33,10 @@ const Products: React.FC = () => {
             src={productTwo}
           />
           <Typography sx={sxStyles.legends} variant="h5">
-            intibiome active extra protection intimate wash
+            Lavagem íntima com proteção extra ativa
           </Typography>
           <Box sx={sxStyles.productActive}>
-            <Typography variant="h2">
-              active
-            </Typography>
+            <Typography variant="h2">Active</Typography>
           </Box>
         </Paper>
         <Paper sx={sxStyles.paper}>
@@ -51,12 +47,10 @@ const Products: React.FC = () => {
             src={productThree}
           />
           <Typography sx={sxStyles.legends} variant="h5">
-            intibiome agecare dryness relief intimate wash
+            Sabonete íntimo para aliviar o ressecamento
           </Typography>
           <Box sx={sxStyles.productAgecare}>
-            <Typography variant="h2">
-              agecare
-            </Typography>
+            <Typography variant="h2">Agecare</Typography>
           </Box>
         </Paper>
       </Box>

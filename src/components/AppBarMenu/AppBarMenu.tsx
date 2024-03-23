@@ -7,33 +7,35 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
-import iconMenu from "src/assets/icons/icon_menu.svg";
 import logoIntibiome from "src/assets/images/small/logoIntibiome.png";
 import iconClose from "src/assets/images/small/icon_close.png";
-import iconSearch from "src/assets/icons/icon_search.svg";
-import { Fade, Slide, TextField, Typography } from "@mui/material";
+import { Fade, Slide, SvgIcon, TextField, Typography } from "@mui/material";
 import { sxStyles } from "./AppBarMenu.style";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SearchIcon from "@mui/icons-material/SearchRounded";
+import MenuIcon from "@mui/icons-material/MenuRounded";
+import CloseIcon from "@mui/icons-material/CloseRounded";
 
 const navItemsMobile = [
-  "brand philosophy",
-  "product technology",
-  "all products",
+  "Missão e valores",
+  "Tecnologias envolvidas",
+  "todos os produtos",
   "intibiome wellness",
   "intibiome active",
   "intibiome agecare",
   "article 1",
   "article 2",
-  "article 3",
   "faq",
-  "contact us",
+  "contact-nos",
+  "trabalhe conosco",
 ];
 
 const navItemsWeb = [
-  "about us",
-  "our products",
-  "intimate health",
-  "contact us",
+  "Sobre nós",
+  "Nossos produtos",
+  "Saúde intima",
+  "Contate-nos",
 ];
 
 const navWebMobileItems = [...navItemsMobile, ...navItemsWeb].filter(function (
@@ -43,7 +45,7 @@ const navWebMobileItems = [...navItemsMobile, ...navItemsWeb].filter(function (
   return [...navItemsMobile, ...navItemsWeb].indexOf(element) === index;
 });
 
-const AppBarMenu: React.FC = () => {
+const AppBarMenu: React.FC<{ isHome: boolean }> = ({ isHome }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [iconSearchOpen, setIconSearchOpen] = React.useState(false);
   const [inputSearch, setInputSearch] = React.useState("");
@@ -72,21 +74,24 @@ const AppBarMenu: React.FC = () => {
       <AppBar position="static" sx={sxStyles.appBar}>
         <Toolbar sx={sxStyles.toolbar}>
           <IconButton color="inherit" aria-label="menu" onClick={handleMenu}>
-            <Box
-              sx={sxStyles.menuIcon}
-              component="img"
-              alt="Menu icon"
-              src={mobileOpen ? iconClose : iconMenu}
-            />
+            {mobileOpen ? (
+              <CloseIcon sx={sxStyles.menuIcon} color="primary" />
+            ) : (
+              <MenuIcon sx={sxStyles.menuIcon} color="primary" />
+            )}
           </IconButton>
           <Box component="img" alt="Logo intibiome" src={logoIntibiome} />
-          <Box
-            component="img"
-            alt="Logo"
-            src={iconSearch}
-            onClick={handleSearch}
-            sx={sxStyles.searchIcon}
-          />
+          <Box sx={sxStyles.searchIcon}>
+            <SearchIcon color="primary" sx={{ marginRight: 2 }} />
+
+            {isHome ? (
+              <a href="/login">
+                <AccountCircleIcon color="primary" />
+              </a>
+            ) : (
+              <Box />
+            )}
+          </Box>
         </Toolbar>
       </AppBar>
       <Slide direction="right" in={mobileOpen}>

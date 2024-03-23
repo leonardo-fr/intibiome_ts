@@ -20,7 +20,7 @@ export const sxStyles = makeSxStyles({
     justifyContent: "space-around"
   },
   searchIcon: {
-    justifyContent: { xs: "end", sm: "end", md: "end", lg: "start", xl: "start"}
+    justifyContent: { xs: "end", sm: "end", md: "end", lg: "start", xl: "start"},
   },
   inputSearch: {
     background: "white",

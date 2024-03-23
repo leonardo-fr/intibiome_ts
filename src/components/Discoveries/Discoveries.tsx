@@ -9,24 +9,24 @@ const Discoveries: React.FC = () => {
   return (
     <Box>
       <Typography sx={sxStyles.discoveries} variant="h1">
-        keep up to date with our discoveries
+        Mantenha-se atualizado com nossas descobertas
       </Typography>
       <Box sx={sxStyles.carousel}>
         <Paper sx={sxStyles.paper}>
           <Box component="img" alt="discover article 1" src={womanOne} />
-          <Typography sx={ sxStyles.dicoveriesOne } variant="h5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <Typography sx={sxStyles.dicoveriesOne} variant="h5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Typography>
         </Paper>
         <Paper sx={sxStyles.paper}>
           <Box component="img" alt="discover article 2" src={womanTwo} />
-          <Typography sx={ sxStyles.dicoveriesOne }  variant="h5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <Typography sx={sxStyles.dicoveriesOne} variant="h5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Typography>
         </Paper>
         <Paper sx={sxStyles.paper}>
           <Box component="img" alt="discorver article 3" src={water} />
-          <Typography sx={ sxStyles.dicoveriesOne }  variant="h5">
+          <Typography sx={sxStyles.dicoveriesOne} variant="h5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Typography>
         </Paper>

@@ -17,18 +17,14 @@ const Footer: React.FC = () => {
     >
       <Box sx={sxStyles.footer}>
         <Typography sx={{}} variant="h4">
-          contact us
+          contate-nos
         </Typography>
         <Divider sx={sxStyles.divider} />
+        <Typography variant="h4">trabalhe conosco</Typography>
+        <Divider sx={sxStyles.divider} />
+        <Typography variant="h4">política de privacidade</Typography>
+        <Divider sx={sxStyles.divider} />
         <Typography variant="h4">faq</Typography>
-        <Divider sx={sxStyles.divider} />
-        <Typography variant="h4">site map</Typography>
-        <Divider sx={sxStyles.divider} />
-        <Typography variant="h4">privacy policy</Typography>
-        <Divider sx={sxStyles.divider} />
-        <Typography variant="h4">cookies policy</Typography>
-        <Divider sx={sxStyles.divider} />
-        <Typography variant="h4">legal notice</Typography>
       </Box>
       <Box sx={sxStyles.iconsFooter}>
         {iconsFooter.map((item) => (
