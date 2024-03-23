@@ -52,7 +52,6 @@ const Login: React.FC = () => {
           Login
         </Button>
       </Box>
-
       <Box>
         <Footer />
       </Box>

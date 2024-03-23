@@ -16,6 +16,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/SearchRounded";
 import MenuIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
+import { Link } from "react-router-dom";
 
 const navItemsMobile = [
   "Missão e valores",
@@ -85,9 +86,9 @@ const AppBarMenu: React.FC<{ isHome: boolean }> = ({ isHome }) => {
             <SearchIcon color="primary" sx={{ marginRight: 2 }} />
 
             {isHome ? (
-              <a href="/login">
+              <Link to={"/login"}>
                 <AccountCircleIcon color="primary" />
-              </a>
+              </Link>
             ) : (
               <Box />
             )}
